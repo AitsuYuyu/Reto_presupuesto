@@ -31,11 +31,7 @@ myTable.innerHTML = '';
         async function eliminarFila(boton) {
             let fila = boton.closest('tr');
             let id = fila.cells[0].innerHTML;
-        
-    
-            let deleteConfig = {
-                method: 'DELETE',
-            };
+            
         
             await fetch(`https://650b2201dfd73d1fab09a578.mockapi.io/Api/Presupuestos_SI/${id}`, deleteConfig);
         
