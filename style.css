@@ -1,0 +1,54 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(169, 214, 168);
+    text-align: center;
+}
+button{
+    background-color: rgb( 120, 189, 118);
+    border-radius: 8px;
+    border: 1px solid black;
+}
+input{
+    background-color: rgb(193, 231, 192, 0.5);
+    color: rgb(65, 118, 64);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 5%;
+}
+form{
+    margin: 5%;
+}
+.search{
+    margin-top: 5%;
+    display: inline-block;
+    width: 60%;
+}
+table{
+    background-color: rgb(215, 249, 215);
+    border-radius: 8px;
+    border: 1px;
+    box-shadow: 10px 5px 5px rgb(63, 62, 62, 0.5);
+    margin-bottom: 5%;
+
+}
+th{
+    margin: 20px;
+}
+.tabla{
+    width: 100vw;
+    flex-direction: column;
+
+}
+.contenedorSearch{
+    background-color: rgb(140, 193, 139);
+    width: 50%;
+    height: 40%;
+    display: inline-block;
+    margin: 10%;
+    box-shadow: 10px 5px 5px rgb(63, 62, 62, 0.5);
+    border-radius: 5px;
+}
