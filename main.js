@@ -83,12 +83,29 @@ function agregarFila(id, valor, caja) {
     let celdaEdit = fila.insertCell(3);
     let celdaDelete = fila.insertCell(4);
 
+
     celdaNum.innerHTML = id;
     celdaValor.innerHTML = valor;
     celdaCaja.innerHTML = caja;
-    celdaEdit.innerHTML = '<button onclick="editarFila(this)">Editar</button>';
-    celdaDelete.innerHTML = '<button onclick="eliminarFila(this)">Eliminar</button>';
-}
+    
+    let botonEditar = document.createElement('button');
+    botonEditar.textContent = '✔️';
+    botonEditar.addEventListener('click', function() {
+        editarFila(this);     });
+
+   
+    let botonEliminar = document.createElement('button');
+    botonEliminar.textContent = '❌';
+    botonEliminar.addEventListener('click', function() {
+        eliminarFila(this); 
+    });
+
+    celdaEdit.appendChild(botonEditar);
+    celdaDelete.appendChild(botonEliminar);
+
+};
+
+
 
 myform.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -123,6 +140,4 @@ myform.addEventListener('submit', async (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     refreshTable();
 });
-
-// Llamada a la función agregarFila() al final del código, esta llamada no es necesaria y puede eliminarse.
-// agregarFila();
+agregarFila();
