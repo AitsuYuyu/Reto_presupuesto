@@ -1,11 +1,12 @@
 let myform = document.querySelector("form");
 let myTable = document.querySelector("#myData");
+const url = "http://127.0.0.1:5010/nomina"
 
 async function refreshTable() {
     myTable.innerHTML = '';
 
     try {
-        let response = await fetch('https://65124103b8c6ce52b395763c.mockapi.io/nomina');
+        let response = await fetch(url);
         let data = await response.json();
 
         data.forEach(item => {
@@ -49,7 +50,7 @@ async function eliminarFila(boton) {
         }
     };
     try {
-        await fetch(`https://65124103b8c6ce52b395763c.mockapi.io/nomina/${id}`, deleteConfig);
+        await fetch(url`${id}`, deleteConfig);
         fila.remove();
     } catch (error) {
         console.error('Error al eliminar la fila:', error);
@@ -83,27 +84,25 @@ function agregarFila(id, valor, caja) {
     let celdaEdit = fila.insertCell(3);
     let celdaDelete = fila.insertCell(4);
 
-
     celdaNum.innerHTML = id;
     celdaValor.innerHTML = valor;
     celdaCaja.innerHTML = caja;
-    
+
     let botonEditar = document.createElement('button');
     botonEditar.textContent = '✔️';
     botonEditar.addEventListener('click', function() {
-        editarFila(this);     });
+        editarFila(this);
+    });
 
-   
     let botonEliminar = document.createElement('button');
     botonEliminar.textContent = '❌';
     botonEliminar.addEventListener('click', function() {
-        eliminarFila(this); 
+        eliminarFila(this);
     });
 
     celdaEdit.appendChild(botonEditar);
     celdaDelete.appendChild(botonEliminar);
-
-};
+}
 
 
 
@@ -121,8 +120,8 @@ myform.addEventListener('submit', async (e) => {
     };
 
     let apiUrl = editId
-        ? `https://65124103b8c6ce52b395763c.mockapi.io/nomina/${editId}`
-        : 'https://65124103b8c6ce52b395763c.mockapi.io/nomina';
+        ? url`${editId}`
+        : url;
 
     try {
         let res = await (await fetch(apiUrl, config)).json();
@@ -140,4 +139,4 @@ myform.addEventListener('submit', async (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     refreshTable();
 });
-agregarFila();
+
