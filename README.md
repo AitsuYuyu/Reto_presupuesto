@@ -6,7 +6,7 @@
 #### Como primera impresión, tenemos la página.
 #### Vemos que tiene tres partes, la primera 
 ![image](https://github.com/AitsuYuyu/Reto_presupuesto/assets/136203413/9cc31173-8b1c-4686-acde-f2fe2fd13f00)
-#### un buscador, con esto podemos buscar los datos mediante el id. (no funciona aún)
+#### un buscador, con esto podemos buscar los datos mediante el id. (sigue sin funcionar)
 #### Tenemos tambien para agregar los ingresos y egresos
 ![image](https://github.com/AitsuYuyu/Reto_presupuesto/assets/136203413/72db9f22-9f62-418b-a203-857434241cc9)
 es un sistema sencillo.
@@ -26,8 +26,8 @@ es un sistema sencillo.
   ![image](https://github.com/AitsuYuyu/Reto_presupuesto/assets/136203413/2a6fdbec-9ed8-4fba-9000-128a46c5abeb)
 
 
-con el de editar, se supone que te abre otra tarjeta y te muestra para editar, pero por el momento no funciona.
-Y el de eliminar, nada mas le das click y directamente se elimina :D
+#### con el de editar, le das al boton de editar y te saltara el valor que ingresaste dentro del campo donde ingresaste el numero al principio, para guardarlo le  das enter y listo :D.
+#### Y el de eliminar, nada mas le das click y directamente se elimina :D
 
 
 
